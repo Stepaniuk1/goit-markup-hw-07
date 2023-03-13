@@ -284,6 +284,10 @@ img {
 }
 
 .features-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 72px;
+  column-gap: 24px;
 }
 
 @media screen and (min-width: 428px) {
@@ -293,13 +297,36 @@ img {
 
 @media screen and (min-width: 768px) {
   .features-list {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 24px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .features-list {
-    gap: 24px;
+    flex-wrap: nowrap;
+  }
+}
+
+.features-item {
+}
+
+@media screen and (min-width: 428px) {
+  .features-item {
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .features-item {
     display: flex;
+    flex-wrap: wrap;
+    flex-basis: calc((100% - 24px) / 2);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .features-item {
   }
 }
 
@@ -390,15 +417,48 @@ img {
 
 /*section-What are we doing*/
 
-.about {
-  padding-top: 120px;
-  padding-bottom: 120px;
+@media screen and (min-width: 1200px) {
+  .about {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
 }
 
 .team {
   padding: 120px 0px;
   background: var(--background-color-team);
 }
+
+.section-title-about {
+  display: none;
+}
+
+@media screen and (min-width: 1200px) {
+  .section-title-about {
+    display: block;
+    text-align: center;
+    margin-bottom: 72px;
+
+    color: var(--title-color);
+    font-size: 36px;
+    line-height: 1.1;
+
+    text-transform: capitalize;
+  }
+}
+
+.section-img {
+  display: none;
+}
+
+@media screen and (min-width: 1200px) {
+  .section-img {
+    display: flex;
+    gap: 24px;
+  }
+}
+
+/*team*/
 .section-title {
   text-align: center;
   margin-bottom: 72px;
@@ -410,12 +470,30 @@ img {
   text-transform: capitalize;
 }
 
-.section-img {
-  display: flex;
-  gap: 24px;
+@media screen and (min-width: 428px) {
+  .section-title {
+  }
 }
 
-/*team*/
+@media screen and (min-width: 768px) {
+  .section-title {
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .section-title {
+  }
+}
+
+.team-list {
+  gap: 24px;
+  display: flex;
+}
+
+.team-list {
+  text-align: center;
+}
+
 .team-item {
   padding-bottom: 32px;
   background-color: var(--white-color);
@@ -430,15 +508,6 @@ img {
 
 .team-paragraph {
   margin-bottom: 8px;
-}
-
-.team-list {
-  gap: 24px;
-  display: flex;
-}
-
-.team-list {
-  text-align: center;
 }
 
 /*social-icon*/
