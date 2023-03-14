@@ -1055,6 +1055,8 @@ textarea:focus {
 
 @media screen and (min-width: 768px) {
   .section-footer {
+    display: flex;
+    justify-content: center;
   }
 }
 
@@ -1066,14 +1068,13 @@ textarea:focus {
 }
 
 .container-footer {
-  /* display: flex; */
   background-color: var(--title-color);
 }
 
 @media screen and (min-width: 768px) {
   .tablet-container {
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     gap: 24px;
   }
 }
@@ -1220,10 +1221,10 @@ textarea:focus {
 }
 
 .subscribe {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 16px;
+  gap: 16px; */
 }
 
 @media screen and (min-width: 768px) {
@@ -1258,10 +1259,14 @@ textarea:focus {
 
   height: 40px;
   width: 100%;
+  margin-bottom: 16px;
+  /* max-width: 398px; */
 }
 
 @media screen and (min-width: 768px) {
   .input-footer {
+    /* max-width: 264px; */
+    width: 100%;
   }
 }
 
