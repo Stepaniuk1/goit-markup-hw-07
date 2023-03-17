@@ -104,9 +104,23 @@ img {
   display: flex;
   align-items: center;
 }
+
+@media screen and (min-width: 768px) {
+  .header-container {
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header-container {
+  }
+}
+
 .container-nav {
   align-items: center;
   display: flex;
+}
+
+.menu-container {
 }
 
 .logo {
@@ -130,8 +144,20 @@ img {
 }
 
 .site-nav {
-  gap: 40px;
-  display: flex;
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .site-nav {
+    display: flex;
+    gap: 40px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .site-nav {
+    display: flex;
+  }
 }
 
 .nav-link {
@@ -175,10 +201,26 @@ img {
 }
 
 .address {
-  gap: 40px;
-  display: flex;
+  display: none;
   color: var(--main-color);
 }
+
+@media screen and (min-width: 768px) {
+  .address {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .address {
+    flex-direction: row;
+    gap: 40px;
+  }
+}
+
 .address-link {
   color: var(--main-color);
   line-height: 1.5;
@@ -187,11 +229,37 @@ img {
   text-decoration: none;
 }
 
+.menu-button {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+
+  fill: var(--title-color);
+  border: none;
+  background-color: transparent;
+}
+
+.menu-button .icon-cross {
+  display: none;
+}
+
+.menu-button.is-open .icon-cross {
+  display: block;
+}
+
+.icon-cross.is-open .menu-button {
+  display: none;
+}
+
+.icon-menu {
+  stroke: var(--title-color);
+}
+
 /*hero*/
 .hero {
   padding: 112px 0px;
   /* height: 600px; */
-  /* max-width: 1440px; */
+  max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
   background-image: linear-gradient(
@@ -1070,6 +1138,13 @@ textarea:focus {
 .container-footer {
   background-color: var(--title-color);
 }
+
+@media screen and (min-width: 1200px) {
+  .container-footer {
+    display: flex;
+  }
+}
+
 .tablet-container {
   margin-bottom: 72px;
 }
@@ -1084,6 +1159,7 @@ textarea:focus {
 
 @media screen and (min-width: 1200px) {
   .tablet-container {
+    margin-bottom: 0px;
   }
 }
 
@@ -1096,6 +1172,7 @@ textarea:focus {
 @media screen and (min-width: 768px) {
   .footer-logo-p {
     text-align: left;
+    margin-bottom: 0px;
   }
 }
 
@@ -1230,6 +1307,7 @@ textarea:focus {
 
 @media screen and (min-width: 768px) {
   .subscribe {
+    display: flex;
     flex-direction: row;
     justify-content: start;
   }
@@ -1267,6 +1345,8 @@ textarea:focus {
 @media screen and (min-width: 768px) {
   .input-footer {
     /* max-width: 264px; */
+    margin-right: 24px;
+    margin-bottom: 0px;
     width: 100%;
   }
 }
