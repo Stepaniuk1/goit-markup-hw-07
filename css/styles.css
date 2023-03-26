@@ -1070,11 +1070,30 @@ textarea:focus {
 
 .list-filter {
   gap: 24px;
-  justify-content: center;
+  justify-content: left;
+  flex-wrap: wrap;
   display: flex;
-
-  margin-bottom: 72px;
+  margin-bottom: 48px;
 }
+
+@media screen and (min-width: 428px) {
+  .list-filter {
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .list-filter {
+    justify-content: center;
+    margin-bottom: 64px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .list-filter {
+    margin-bottom: 72px;
+  }
+}
+
 .button-filter {
   transition-property: color, background-color, box-shadow;
   transition-duration: 250ms;
